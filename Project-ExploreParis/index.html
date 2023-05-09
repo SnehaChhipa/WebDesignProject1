@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Explore Paris</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
+
+</head>
+<body class="mainPage">
+<div id="homeSideNav" class="sideNav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="Sights.html">Sights</a>
+  <a href="Architecture.html">Architecture</a>
+  <a href="KidsSpecial.html">Kids Special</a>
+  <a href="HistoricPlaces.html">Historic Places</a>
+  <a href="Restaurants.html">Restaurants</a>
+</div>
+
+    <ul class="homeNav">
+    <li class="nav" style="font-size: 30px; cursor: pointer; padding: 4px 0 0 15px" onclick="openNav()">&#9776;</li>
+    <li class="nav"><a href="index.html">Home</a></li>
+    <li class="nav" style="float:right"><a href="map.html">Map</a></li>
+
+  </ul>
+
+
+<h1>Explore Paris!</h1>
+
+<div class="home_container">
+    <div id="sight"><h3><a href="Sights.html">Sights</a></h3></div>
+    <div id="architecture"><h3><a href="Architecture.html">Architecture</a></h3></div>
+    <div id="kidsSpecial"><h3><a href="KidsSpecial.html">Kids Special</a></h3></div>
+    <div id="history"><h3><a href="HistoricPlaces.html">Historic Places</a></h3></div>
+    <div id="restaurant"><h3><a href="Restaurants.html">Restaurants</a></h3></div>
+    <div id="blank1"> </div>
+    <div id="blank2"> </div>
+</div>
+
+<script>
+  function openNav() {
+    document.getElementById("homeSideNav").style.width = "300px";
+  }
+  function closeNav() {
+    document.getElementById("homeSideNav").style.width = "0";
+  }
+
+</script>
+
+</body>
+</html>
+

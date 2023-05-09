@@ -1,0 +1,992 @@
+body.mainPage {
+    background-image: url("Page_Backgrounds/home_background1.jpeg");
+    /*Image Reference= https://res.klook.com/image/upload/Mobile/City/swox6wjsl5ndvkv5jvum.jpg */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+body.infoPage {
+    background-color: black;
+}
+
+.sideNav {
+     height: 100%;
+     width: 0;
+     position: fixed;
+     z-index: 1;
+     top: 0;
+     left: 0;
+     background-color: black;
+     overflow-x: hidden;
+     transition: 0.5s;
+     padding-top: 60px;
+ }
+
+.sideNav a {
+    padding: 8px 8px 25px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sideNav a:hover {
+    text-decoration: underline;
+}
+
+.sideNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 500px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+ul.homeNav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgba(254,254,254,0.4);
+}
+
+ul.otherMainNav {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 0;
+    overflow: hidden;
+    background-color:rgba(254,254,254,0.4);
+    position: fixed;
+}
+
+li.nav {
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+li.nav a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.nav a.sights_title {
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    padding: 8px 480px 8px 330px;
+}
+
+li a:hover:not(.active) {
+   text-decoration: underline;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+    text-align: right;
+    padding: 4% 14%
+}
+
+:root {
+    --main-radius: 40px;
+}
+
+#sight {
+    grid-area: sight;
+    background-color:rgba(254,254,254,0.4);
+    font-family: 'Dancing Script', cursive;
+    padding: 30px;
+    border-radius: var(--main-radius);
+}
+
+#architecture {
+    grid-area: architecture;
+    background-color:rgba(254,254,254,0.4);
+    font-family: 'Dancing Script', cursive;
+    padding: 30px;
+    border-radius: var(--main-radius);
+}
+
+#kidsSpecial {
+    grid-area: kidsSpecial;
+    background-color:rgba(254,254,254,0.4);
+    font-family: 'Dancing Script', cursive;
+    padding: 30px 0px;
+    border-radius: var(--main-radius);
+}
+
+#history {
+    grid-area: history;
+    background-color:rgba(254,254,254,0.4);
+    font-family: 'Dancing Script', cursive;
+    padding: 30px 0px;
+    border-radius: var(--main-radius);
+}
+
+#restaurant {
+    grid-area: restaurant;
+    background-color:rgba(254,254,254,0.4);
+    font-family: 'Dancing Script', cursive;
+    padding: 30px;
+    border-radius: var(--main-radius);
+}
+
+.home_container {
+    display: grid;
+    height: 100vh;
+    position: fixed;
+
+    grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 1fr 0.3fr;
+    grid-template-rows: 0.3fr 0.1fr;
+
+    grid-template-areas:
+        "blank1 sight architecture  history kidsSpecial restaurant blank2";
+
+    grid-gap: 2.1rem;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+.home_container a {
+    color: black;
+    text-decoration: none;
+}
+
+.home_container a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width:500px) {
+    .home_container {
+        display: grid;
+        height: 100vh;
+        position: fixed;
+
+        grid-template-columns: 0.8fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 0.6fr 1fr;
+
+        grid-template-areas:
+        "blank1 sight"
+        "blank1 architecture"
+        "blank1 history"
+        "blank1 kidsSpecial"
+        "blank1 restaurant"
+        "blank1 blank2"
+        "blank1 blank2";
+
+        grid-gap: 1.5rem;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    #sight {
+        padding: 0;
+        border-radius: var(--main-radius);
+        font-size: 20px;
+    }
+
+    #architecture {
+        padding: 0;
+        font-size: 20px;
+    }
+
+    #kidsSpecial {
+        padding: 0;
+        font-size: 20px;
+    }
+
+    #history {
+        padding: 0;
+        font-size: 20px;
+    }
+
+    #restaurant {
+        padding: 0;
+        font-size: 20px;
+    }
+
+    body.mainPage {
+        background-image: url("Page_Backgrounds/mobileHomeBackground.png");
+        /*Image Reference= cropped version of https://res.klook.com/image/upload/Mobile/City/swox6wjsl5ndvkv5jvum.jpg */
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    li.nav {
+        float: left;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+    }
+    h1 {
+        font-size: 30px;
+        text-align: center;
+        padding: 4% 14%
+    }
+}
+
+
+
+
+
+.SightContainer {
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: 0.6fr 1fr 1fr 1%;
+    grid-template-rows: 1fr;
+
+    grid-template-areas:
+        "sightsNav sightColumn1 sightColumn2 blank3";
+
+    grid-gap: 2.5rem;
+}
+
+#sightsNav {
+    position: fixed;
+    grid-area: sightsNav;
+    background-image: url("Page_Backgrounds/sightSide2.png");
+    /*Image Reference= cropped version of https://res.klook.com/image/upload/Mobile/City/swox6wjsl5ndvkv5jvum.jpg */
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 0 60px 220px 50px;
+}
+
+#sightsNav a {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    padding: 8px 8px 0 5px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    color: black;
+}
+
+#sightsNav a:visited {
+    color: black;
+}
+
+#sightsNav a:hover {
+    text-decoration: underline;
+}
+
+#blank3 {
+    grid-area: blank3;
+}
+
+#sightColumn1 {
+    grid-area: sightColumn1;
+    font-family: 'Noto Sans Miao', sans-serif;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+#sightColumn1 h3 {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+#sightColumn2 {
+    grid-area: sightColumn2;
+    font-family: 'Noto Sans Miao', sans-serif;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+#sightColumn2 h3 {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+#blank3 {
+    grid-area: blank3;
+}
+
+.SightContainer img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.Description {
+    background-color: white;
+    padding: 5px 20px 5px 15px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width:500px) {
+    .SightContainer {
+        display: grid;
+        height: 100vh;
+
+        grid-template-columns: 1fr 1fr 1%;
+        grid-template-rows: 1fr;
+
+        grid-template-areas:
+        "sightColumn1 sightColumn2 blank3";
+
+        grid-gap: 1rem;
+    }
+
+    #sightsNav {
+        visibility: hidden;
+    }
+    li.nav {
+        float: left;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+    }
+    li.nav a.sights_title {
+        font-size: 20px;
+        padding: 8px 125px 0 0;
+    }
+
+    #sightColumn1 {
+        font-size: 10px;
+    }
+    #sightColumn2 {
+        font-size: 10px;
+    }
+
+}
+
+
+
+
+.architectureContainer {
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: 0.01fr 4fr 0.8fr;
+    grid-template-rows: 1fr;
+
+    grid-template-areas:
+        "blank6 archList archNav";
+
+    grid-gap: 2.1em;
+}
+
+
+
+#archNav {
+    margin-top: 50px;
+    grid-area: archNav;
+    background-image: url("Page_Backgrounds/archNav4.png");
+    /*Image Reference= cropped version of https://res.klook.com/image/upload/Mobile/City/swox6wjsl5ndvkv5jvum.jpg */
+    background-size: cover;
+    border-radius: 10px;
+    position: fixed;
+    margin-left: 82%;
+    margin-right: 1%;
+    padding-bottom: 320px;
+
+}
+
+#archNav a {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    color: black;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#archNav a:visited {
+    color: black;
+}
+
+#archNav a:hover {
+    text-decoration: underline;
+}
+
+#archList {
+    grid-area: archList;
+    margin-top: 50px;
+}
+
+.archInfo {
+    display: inline-block;
+    font-family: 'Noto Sans Miao', sans-serif;
+    font-size: 14px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.archInfo h3 {
+    font-family: 'Quicksand', sans-serif;
+    padding-left: 20px;
+}
+
+.archInfo p {
+    padding: 0 10px 0 20px;
+}
+
+li.nav a.architecture-title {
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    padding: 8px 300px 8px 320px;
+}
+
+@media only screen and (max-width:500px) {
+    .architectureContainer {
+        display: grid;
+        height: 100vh;
+
+        grid-template-columns: 0.01fr 4fr;
+        grid-template-rows: 1fr;
+
+        grid-template-areas:
+        "blank6 archList";
+
+        grid-gap: 1.5rem;
+    }
+
+    #archNav {
+        visibility: hidden;
+    }
+
+    #archList img {
+        width: 70%;
+        height: 20%;
+    }
+
+    .archInfo {
+        font-size: 11px;
+    }
+
+    .archInfo p {
+       margin-left: 0px;
+    }
+
+    .rightMarginContent img {
+        float: right;
+    }
+
+    li.nav a.architecture-title {
+        font-size: 20px;
+        padding: 8px 95px 0 0;
+    }
+}
+
+
+
+
+
+
+
+.history_Container {
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: 1fr 5fr 0.05fr 5fr 1fr;
+    grid-template-rows: 3fr 12fr;
+
+    grid-template-areas:
+        "blankList blankList blankList blankList blankList"
+        "blank6 historyColumn1 blank7 historyColumn2 blank8";
+
+    grid-gap: 1em;
+}
+li.nav a.historic_title {
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    padding: 8px 400px 13px 320px;
+}
+
+#blankList {
+    grid-area: blankList;
+    background-image: url("Page_Backgrounds/historyTopbackrgound.png");
+    /*Image Reference= cropped version of https://allthatsinteresting.com/wordpress/wp-content/uploads/2020/05/the-construction-of-eiffel-tower.jpg */
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    margin-top: 50px;
+    position: fixed;
+}
+
+#blankList ul {
+    overflow: hidden;
+    padding: 80px 600px 5px 525px;
+}
+
+#blank6 {
+    grid-area: blank6;
+}
+
+#historyColumn1 {
+    grid-area: historyColumn1;
+}
+
+p.Date {
+    color: white;
+    font-family: 'Macondo', cursive;
+    text-align: right;
+    font-size: 35px;
+}
+
+.historic_Images {
+    border-radius: 10px;
+    width: 100%;
+    height: 300px
+}
+
+.HBuilding_Title {
+    font-family: 'Macondo', cursive;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.hisDescription {
+    background-color: white;
+    padding: 5px 20px 30px 15px;
+    border-radius: 10px;
+}
+.facts {
+    font-family: 'Gilda Display', serif;
+    text-align: center;
+}
+#his2 {
+    text-align: left;
+    margin-top: 60%;
+}
+#his4 {
+    text-align: left;
+    margin-top: 60%;
+}
+#his6 {
+    text-align: left;
+    margin-top: 60%;
+}
+
+#blank7 {
+    grid-area: blank7;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#historyColumn2 {
+    grid-area: historyColumn2;
+}
+#blank8 {
+    grid-area: blank8;
+}
+@media only screen and (max-width:500px) {
+    .history_Container {
+        display: grid;
+        height: 100vh;
+
+        grid-template-columns: 1fr 5fr 0.05fr 5fr 1fr;
+        grid-template-rows: 1fr;
+
+        grid-template-areas:
+        "blank6 historyColumn1 blank7 historyColumn2 blank8";
+
+        grid-gap: 1em;
+    }
+    li.nav a.historic_title {
+        font-size: 20px;
+        padding: 8px 95px 0 0;
+    }
+    #blankList {
+        visibility: hidden;
+    }
+    .historic_Images {
+        height: 160px
+    }
+    .HBuilding_Title {
+        font-size: 16px;
+    }
+    .facts {
+        font-size: 12px;
+    }
+    p.Date {
+        font-size: 25px;
+    }
+    #his2 {
+        margin-top: 80%;
+    }
+    #his4 {
+        margin-top: 90%;
+    }
+    #his6 {
+        margin-top: 90%;
+    }
+}
+
+
+
+
+
+
+body.KidsInfoPage {
+    background-image: url("Page_Backgrounds/kidsSpecialBackground.png");
+    /*Image Reference= https://res.klook.com/image/upload/Mobile/City/swox6wjsl5ndvkv5jvum.jpg */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.KidsContainer {
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: 0.05fr 1fr 1fr 1fr 0.05fr;
+    grid-template-rows: 0.2fr 1fr 1fr;
+
+    grid-template-areas:
+        "pageInfo pageInfo pageInfo pageInfo pageInfo"
+        "blank8 image1 image2 image3 blank9"
+        "blank8 image4 image5 image6 blank9";
+
+    grid-gap: 1.5em;
+}
+
+li.nav a.kidsSp_title {
+    color: black;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    padding: 8px 400px 13px 340px;
+}
+
+.KidsContainer div img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    cursor:pointer
+}
+
+#pageInfo {
+    grid-area: pageInfo;
+}
+#pageInfo {
+    padding: 5px 100px 0 400px;
+    font-family: 'Noto Sans Miao', sans-serif;
+}
+
+#blank8 {
+    grid-area: blank8;
+}
+#blank9 {
+    grid-area: blank9;
+}
+#image1 {
+    grid-area: image1;
+}
+#image2 {
+    grid-area: image2;
+}
+#image3 {
+    grid-area: image3;
+}
+#image4 {
+    grid-area: image4;
+}
+#image5 {
+    grid-area: image5;
+}
+#image6 {
+    grid-area: image6;
+}
+
+.content {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(254,254,254,0.7);
+    overflow-x: hidden;
+    transition: 0.8s;
+    padding-top: 10%;
+}
+
+.content .closeContent {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: black;
+    text-decoration: none;
+}
+
+.content .closeContent:hover {
+    text-decoration: underline;
+}
+
+.content img {
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 250px;
+}
+
+.ks_description {
+    margin-left: 30%;
+    background-color: white;
+    margin-right: 30%;
+    border-radius: 10px;
+    font-family: 'Noto Sans Miao', sans-serif;
+    padding: 1%;
+}
+
+.ks_description h3 {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+.ks_description p {
+    font-size: 13px;
+    text-align: center;
+}
+.ks_description a {
+    font-size: 13px;
+    color: black;
+}
+
+.ks_description a:visited {
+    color: black;
+}
+
+@media only screen and (max-width:500px) {
+    .KidsContainer {
+        display: grid;
+        height: 100vh;
+
+        grid-template-columns: 0.01fr 1fr 1fr 0.01fr;
+        grid-template-rows: 0.2fr 1fr 1fr 1fr;
+
+        grid-template-areas:
+        "pageInfo pageInfo pageInfo pageInfo"
+        "blank8 image1 image2 blank9"
+        "blank8 image3 image4 blank9"
+        "blank8 image5 image6 blank9";
+
+        grid-gap: 1.5em;
+    }
+    li.nav a.kidsSp_title {
+        font-size: 20px;
+        padding: 8px 95px 0 14px;
+    }
+    #pageInfo {
+        padding: 5px 20px 0 20px;
+        font-size: 14px;
+    }
+    .content img {
+        width: 70%;
+        height: 40%;
+    }
+    .ks_description {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+    #pageInfo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+
+
+.restaurantContainer {
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: 0.1fr 1fr 1fr 0.1fr 1fr 1fr 0.1fr;
+    grid-template-rows: 2fr 0.05fr;
+
+    grid-template-areas:
+        "blank10 imgColumn1 txtColumn1 blank11 imgColumn2 txtColumn2 blank12"
+        "blank13 blank13 blank13 blank13 blank13 blank13 blank13";
+
+}
+li.nav a.restaurant_title {
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    padding: 8px 450px 13px 330px;
+}
+
+.restaurantContainer img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.txt {
+    background-color: white;
+    border-radius: 10px;
+    font-family: 'Noto Sans Miao', sans-serif;
+    font-size: 13px;
+    padding-left: 4%;
+    padding-bottom: 0;
+}
+.txt p {
+    padding-bottom: 5px;
+}
+.txt p.title {
+    font-family: 'Quicksand', sans-serif;
+    text-align: left;
+    font-size: 16px;
+    padding: 2% 0 0 1%;
+}
+
+.topImage {
+    margin-top: 20%;
+    height: 150px
+}
+
+#topContent {
+    margin-top: 20%;
+}
+
+
+#blank10 {
+    grid-area: blank10;
+}
+#imgColumn1 {
+    grid-area: imgColumn1;
+}
+#txtColumn1 {
+    grid-area: txtColumn1;
+}
+#blank11 {
+    grid-area: blank11;
+}
+#imgColumn2 {
+    grid-area: imgColumn2;
+}
+#txtColumn2 {
+    grid-area: txtColumn2;
+}
+#blank12 {
+    grid-area: blank12;
+}
+#blank13 {
+    grid-area: blank13;
+}
+
+
+
+@media only screen and (max-width:500px) {
+    .restaurantContainer {
+        display: grid;
+        height: 100vh;
+
+        grid-template-columns: 0.2fr 1fr 1fr;
+        grid-template-rows: 2fr 2fr;
+
+        grid-template-areas:
+        "blank10 imgColumn1 txtColumn1"
+        "blank10 imgColumn2 txtColumn2";
+    }
+
+    li.nav a.restaurant_title {
+        font-size: 20px;
+        padding: 8px 95px 0 0;
+    }
+    .restaurantContainer img {
+        width: 100%;
+    }
+    #pageFooter {
+        visibility: hidden;
+    }
+    .topImage {
+        margin-top: 30%;
+        height: 100px
+    }
+    #topContent {
+        margin-top: 30%;
+    }
+    .txt {
+        font-size: 12px;
+    }
+    .txt p.title {
+        font-size: 14px;
+        padding: 4% 0 0 1%;
+    }
+    .restaurantContainer img {
+        height: 15%;
+    }
+    #r_image1 {
+        padding-bottom: 20%;
+    }
+    #r_image2 {
+        padding-bottom: 20%;
+    }
+    #r_image3 {
+        padding-bottom: 50%;
+    }
+    #r_image5 {
+        padding-bottom: 50%;
+    }
+    #r_image6 {
+        padding-bottom: 30%;
+    }
+    #r_image7 {
+        padding-bottom: 30%;
+    }
+
+}
+
+
+iframe {
+    padding-left: 70px;
+    padding-top: 30px;
+    border:0;
+    width: 1000px;
+    height: 500px;
+}
+
+li.nav a.map_title {
+    color: black;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    padding: 10px 450px 13px 380px;
+}
+
+@media only screen and (max-width:500px) {
+    li.nav a.map_title {
+        font-size: 20px;
+        padding: 8px 95px 0 55px;
+    }
+
+    iframe {
+        padding-left: 70px;
+        padding-top: 30px;
+        border:0;
+        width: 250px;
+        height: 400px;
+    }
+
+
+}
+
